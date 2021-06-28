@@ -1,23 +1,16 @@
-import pngegg from './pngegg.png';
 import './App.css';
+import NavBar from './components/NavBar/NavBar';
 
 function App() {
+  const message = () => alert('Esta sección esta en construccion!!')
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={pngegg} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://es.wikipedia.org/wiki/Suculenta"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          SUCULENTAS
-        </a>
-      </header>
+      <NavBar 
+        item1="NUESTROS PRODUCTOS" 
+        item2="PROMOCIONES" 
+        item3="NUESTRA HISTORIA" 
+        item4="APRENDE" 
+        eventClick={message}/>
     </div>
   );
 }
