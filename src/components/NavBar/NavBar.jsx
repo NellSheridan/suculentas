@@ -9,8 +9,8 @@ const NavBar = (props) => {
             <div className="container-wide">
                 <nav className="nav-menu-left">
                     <ul>
-                        <li onClick={props.eventClick}>{props.item1}</li>
-                        <li onClick={props.eventClick}>{props.item2}</li>
+                        <li onClick={props.eventClick}>NUESTROS PRODUCTOS</li>
+                        <li onClick={props.eventClick}>PROMOCIONES</li>
                     </ul> 
                 </nav>
                 <div className="nav-logo-wrap">
@@ -18,8 +18,8 @@ const NavBar = (props) => {
                 </div>
                 <nav className="nav-menu-right">
                     <ul>
-                        <li onClick={props.eventClick}>{props.item3}</li>
-                        <li onClick={props.eventClick}>{props.item4}</li>
+                        <li onClick={props.eventClick}>NUESTRA HISTORIA</li>
+                        <li onClick={props.eventClick}>APRENDE</li>
                         <li className="cart-wrapper">
                             <Cart></Cart>
                         </li>
