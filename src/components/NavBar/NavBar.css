@@ -2,6 +2,8 @@
 
 .navigation-wrapper {
     font-family: 'Montserrat', sans-serif;
+    border-bottom: 1px solid #418880;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 30%);
     font-weight: bold;
     background-color: rgba(133, 160, 175, 0);
     position: fixed;
