@@ -1,8 +1,8 @@
 import React from 'react';
 import './ItemListContainer.css';
+import ItemCount from '../ItemCount/ItemCount';
 
 const ItemListContainer = (props) => {
-    console.log(props);
     return (
         <main className="main-wrapper">
             <h1>{props.greeting.title}</h1>
@@ -10,6 +10,7 @@ const ItemListContainer = (props) => {
             <section>
                 {props.greeting.description}
             </section>
+            <ItemCount min={1} max={10}/>
         </main>
     )
 }
