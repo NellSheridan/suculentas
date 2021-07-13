@@ -1,17 +1,15 @@
 .item-count-wrapper {
     margin-top: 50px;
 }
-button {
+.item-count-wrapper button {
     font-weight: bold;
     font-size: 17px;
     margin: 0 30px;
     height: 50px;
     width: 50px;
     text-align: center;
-    /* color: white; */
     border-radius: 50%;
     border: none;
-    /* background-color: #6A9577; */
     outline: none;
 }
 

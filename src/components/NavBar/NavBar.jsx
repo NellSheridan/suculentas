@@ -7,7 +7,7 @@ const NavBar = (props) => {
     return (
         <header className="navigation-wrapper">
             <div className="container-wide">
-                <nav className="nav-menu-left">
+                <nav className="nav-menu">
                     <ul>
                         <li onClick={props.eventClick}>NUESTROS PRODUCTOS</li>
                         <li onClick={props.eventClick}>PROMOCIONES</li>
@@ -16,7 +16,7 @@ const NavBar = (props) => {
                 <div className="nav-logo-wrap">
                     <img src={logo} alt="logo" className="img"/>
                 </div>
-                <nav className="nav-menu-right">
+                <nav className="nav-menu">
                     <ul>
                         <li onClick={props.eventClick}>NUESTRA HISTORIA</li>
                         <li onClick={props.eventClick}>APRENDE</li>

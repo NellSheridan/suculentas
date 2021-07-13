@@ -13,6 +13,7 @@
     bottom: auto;
     z-index: 9999999998;
     font-size: 12.7px;
+    background-color: white;
 }
 
 .container-wide {
@@ -37,13 +38,14 @@ ul {
     width: 80px;
 }
 
-li {
+.nav-menu  li {
     list-style: none;
     padding: 0 20px;
     cursor: pointer;
+    list-style: none;
 }
 
-li:first-child {
+.nav-menu li:first-child {
     padding: 0;
 }
 
