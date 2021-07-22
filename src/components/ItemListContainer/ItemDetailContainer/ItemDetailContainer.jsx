@@ -42,7 +42,7 @@ const ItemDetailContainer = () => {
 
     const getSelectItem = () => {
         return new Promise((resolve) => {
-          setTimeout(() => resolve(productsArray.find((item) => item.id === id)), 2000);
+          setTimeout(() => resolve(productsArray.find((item) => item.id === id)), 1000);
         });
     };
     
