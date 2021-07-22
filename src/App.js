@@ -2,9 +2,8 @@ import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemListContainer/ItemDetailContainer/ItemDetailContainer';
-
 import WelcomeContainer from './components/WelcomeContainer/WelcomeContainer';
-
+import CheckoutCart from './views/CheckoutCart/CheckoutCart'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 function App() {
@@ -31,8 +30,11 @@ function App() {
           <Route path="/historia">
             <ItemDetailContainer />
           </Route>
+          <Route path="/aprendizaje">
+            <ItemDetailContainer />
+          </Route>
           <Route path="/bolsa">
-            <checkoutCart />
+            <CheckoutCart />
           </Route>
         </Switch>
       </BrowserRouter>
