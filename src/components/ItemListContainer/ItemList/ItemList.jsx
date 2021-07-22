@@ -46,9 +46,10 @@ const ItemList = () => {
     });
   };
 
-  getItems()
-    .then(result => setList(result));
-  
+  useEffect(() => {
+    getItems().then(result => setList(result));
+  }, []);
+
     return (
       <ul className="list-container">
          { list.map(el => (
