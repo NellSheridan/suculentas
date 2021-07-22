@@ -13,9 +13,9 @@ const NavBar = (props) => {
                         <li onClick={props.eventClick}>PROMOCIONES</li>
                     </ul> 
                 </nav>
-                <div className="nav-logo-wrap">
+                <a className="nav-logo-wrap" href="/">
                     <img src={logo} alt="logo" className="img"/>
-                </div>
+                </a>
                 <nav className="nav-menu">
                     <ul>
                         <li onClick={props.eventClick}>NUESTRA HISTORIA</li>
