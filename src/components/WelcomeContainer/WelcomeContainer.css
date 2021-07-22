@@ -1,8 +1,7 @@
 .welcome-wrapper {
     background-image: url(https://cdn.shopify.com/s/files/1/0274/5001/5849/files/Slider-3.jpg?v=1571045841);
-    height: 450px;
+    height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    margin-top: 60px;
 }
