@@ -41,7 +41,7 @@ const ItemList = () => {
   const [list, setList] = useState([]);
 
   const getItems = () => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       setTimeout(() => resolve(itemsArray), 2000);
     });
   };
