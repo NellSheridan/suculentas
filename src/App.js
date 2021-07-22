@@ -3,35 +3,37 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemListContainer/ItemDetailContainer/ItemDetailContainer';
 import WelcomeContainer from './components/WelcomeContainer/WelcomeContainer';
-import CheckoutCart from './views/CheckoutCart/CheckoutCart'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import CheckoutCart from './views/CheckoutCart/CheckoutCart';
+import Promotions from './views/Promotions/Promotions'
+import About from './views/About/About'
+import Blog from './views/Blog/Blog'
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 function App() {
-  const message = () => alert('Esta sección esta en construccion!!')
+
   const greetings = {
-    title: '!Directo del Vivero te ofrecemos:¡',
-    subtitle: 'Ponte cómodo :)',
-    description: 'En éste espacio encontrarás inspiración relacionada con el mundo de las suculentas, cactus, y sus variantes. ¡Espero que te guste!'
+    title: '!Directo del Vivero te ofrecemos¡',
   };
   return (
     <div className="App">
       <BrowserRouter>
-        <NavBar eventClick={message}/>
+        <NavBar/>
         <Switch>
           <Route exact path="/">
             <WelcomeContainer />
-          </Route>
-          <Route path="/productos">
             <ItemListContainer greeting={greetings}/>
           </Route>
+          <Route path="/productos/:id">
+            <ItemDetailContainer />
+          </Route>
+          <Route path="/que-hacemos">
+            <About />
+          </Route>
           <Route path="/promociones">
-            <ItemDetailContainer />
+            <Promotions />
           </Route>
-          <Route path="/historia">
-            <ItemDetailContainer />
-          </Route>
-          <Route path="/aprendizaje">
-            <ItemDetailContainer />
+           <Route path="/blog">
+             <Blog />
           </Route>
           <Route path="/bolsa">
             <CheckoutCart />

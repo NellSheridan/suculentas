@@ -5,7 +5,7 @@ import Item from '../Item/Item'
 const ItemList = () => {
   const itemsArray = [
     {
-      id: 1,
+      id: 0,
       title: 'Lavanda morada en maceta 28cm',
       img: require('../../../assets/products/126591.jpg'),
       category: 1,
@@ -13,7 +13,7 @@ const ItemList = () => {
       stock: 10
     },
     {
-      id: 2,
+      id: 1,
       title: 'Suculenta cola de burro en maceta 12cm',
       img: require('../../../assets/products/126616.jpg'),
       category: 1,
@@ -21,7 +21,7 @@ const ItemList = () => {
       stock: 5
     },
     {
-      id:4,
+      id: 2,
       title: 'Suculenta árbol de Jade en maceta 9cm',
       img: require('../../../assets/products/126636.jpg'),
       category: 1,
@@ -54,7 +54,7 @@ const ItemList = () => {
       <ul className="list-container">
          { list.map(el => (
            <li key={el.id} className="list-item">
-             <Item element={el}/>
+             <Item item={el}/>
            </li>    
             ))};
       </ul>

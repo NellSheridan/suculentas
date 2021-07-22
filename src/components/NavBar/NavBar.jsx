@@ -11,7 +11,7 @@ const NavBar = () => {
                 <nav className="nav-menu">
                     <ul>
                         <li>
-                            <Link to="/productos">NUESTROS PRODUCTOS</Link>
+                            <Link to="/que-hacemos">QUIENES SOMOS</Link>
                         </li>
                         <li>
                             <Link to="/promociones">PROMOCIONES</Link>
@@ -23,11 +23,12 @@ const NavBar = () => {
                 </a>
                 <nav className="nav-menu">
                     <ul>
+                  
                         <li>         
-                            <Link to="/historia">NUESTRA HISTORIA</Link>
+                            <Link to="/blog">BLOG</Link>
                         </li>
-                        <li>
-                            <Link to="/aprendizaje">APRENDE</Link>
+                        <li>         
+                            CONTACTANOS
                         </li>
                         <li className="cart-wrapper">
                             <Link to="/bolsa">
