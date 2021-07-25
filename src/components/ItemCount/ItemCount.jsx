@@ -2,21 +2,25 @@ import React, {useState} from 'react';
 import './ItemCount.css';
 
 const ItemCount = (props) => {
-    const [count, setCount] = useState(1);
+    // Pendiente Refactorizar usando destructuracion
+    console.log(props);
+    // const [count, setCount] = useState(1);
 
     const buttonIncreaseQuantity = () => {
-        setCount(count + 1);
+        props.count < props.max && props.setCount(props.count + 1);
+        // setCount(count + 1);
     }
 
     const buttonDecreaseQuantity = () => {
-        setCount(count - 1);
+        props.count > props.min && props.setCount(props.count - 1);
+        // setCount(count - 1);
     }
 
     return (
         <div className="item-count-wrapper">
-            <button disabled={count == props.min} onClick={buttonDecreaseQuantity}>-</button>
-            <span>{ count }</span>
-            <button disabled={count == props.max} onClick={buttonIncreaseQuantity}>+</button>
+            <button disabled={props.count == props.min} onClick={buttonDecreaseQuantity}>-</button>
+            <span>{ props.count }</span>
+            <button disabled={props.count == props.max} onClick={buttonIncreaseQuantity}>+</button>
         </div>
     )
 }
