@@ -81,7 +81,7 @@ const ItemDetailContainer = () => {
                             setCount={setCount}
                             max={itemToDisplay?.stock}
                         />
-                        <button> Comprar </button>
+                        <button onClick={handleState}> Comprar </button>
                     </div>
                 ) : (
                     <Link to="/bolsa" onClick={handleState}>
