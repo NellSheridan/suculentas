@@ -8,6 +8,7 @@ import Promotions from './views/Promotions/Promotions'
 import About from './views/About/About'
 import Blog from './views/Blog/Blog'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { DataProvider } from './services/Context'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
   };
   return (
     <div className="App">
+    <DataProvider>
       <BrowserRouter>
         <NavBar/>
         <Switch>
@@ -24,7 +26,7 @@ function App() {
             <ItemListContainer greeting={greetings}/>
           </Route>
           <Route path="/productos/:id">
-            <ItemDetailContainer />
+              <ItemDetailContainer />
           </Route>
           <Route path="/que-hacemos">
             <About />
@@ -40,6 +42,8 @@ function App() {
           </Route>
         </Switch>
       </BrowserRouter>
+    </DataProvider>
+
     </div>
   );
 }

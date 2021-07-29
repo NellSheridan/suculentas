@@ -3,6 +3,7 @@ import './ItemDetailContainer.css';
 import { useParams } from 'react-router'; 
 import ItemCount from '../../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
+import { Context } from '../../../services/Context'
 
 const ItemDetailContainer = () => {
     // Refactorizar item debe venir de una props al elegir el elemento
@@ -44,6 +45,8 @@ const ItemDetailContainer = () => {
         }
     ]
 
+    const { addCart } = useContext(Context);
+
     const [ itemToDisplay, setItemToDisplay] = useState([]);
 
     const { id } = useParams();
@@ -66,6 +69,11 @@ const ItemDetailContainer = () => {
     const [ finished, setFinished ] = useState(false);
 
     const handleState = () => setFinished(!finished);
+
+    const handleSend = () => {
+        addCart({ ...item, quantity: count })
+    }
+
     return (
         <div className="detail-wrapper">
             <div className="info">
@@ -81,7 +89,10 @@ const ItemDetailContainer = () => {
                             setCount={setCount}
                             max={itemToDisplay?.stock}
                         />
-                        <button onClick={handleState}> Comprar </button>
+                        <button onClick={() => {
+                            handleState();
+                            handleSend();
+                        }}> Comprar </button>
                     </div>
                 ) : (
                     <Link to="/bolsa" onClick={handleState}>
