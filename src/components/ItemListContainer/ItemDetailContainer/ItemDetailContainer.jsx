@@ -1,4 +1,4 @@
-import React, { useState, useEffect }from 'react';
+import React, { useState, useEffect, useContext }from 'react';
 import './ItemDetailContainer.css';
 import { useParams } from 'react-router'; 
 import ItemCount from '../../ItemCount/ItemCount'
@@ -71,7 +71,7 @@ const ItemDetailContainer = () => {
     const handleState = () => setFinished(!finished);
 
     const handleSend = () => {
-        addCart({ ...item, quantity: count })
+        addCart({ ...itemToDisplay, quantity: count })
     }
 
     return (
