@@ -16,6 +16,7 @@ function App() {
         <header>
           <NavBar/>
         </header>
+        <main>
         <Switch>
           <Route exact path="/">
             <Welcome />
@@ -39,6 +40,7 @@ function App() {
             <Cart />
           </Route> */}
         </Switch>
+        </main>
       </BrowserRouter>
     </div>
   );

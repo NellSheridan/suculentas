@@ -1,12 +1,15 @@
 import React from 'react';
+import './Loader.scss';
 
 const Loader = () => {
     return (
-        <div className="Loader">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+        <section className="Loader__container">
+            <div className="Loader">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </section>
     );
 }
 

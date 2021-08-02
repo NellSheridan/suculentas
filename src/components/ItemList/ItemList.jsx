@@ -4,14 +4,15 @@ import Item from './Item/Item'
 
 const ItemList = ({ displayItems }) => {
     return (
-      <ul className="list-container">
+      <main className="Item__container">
+         <ul className="list-container">
          { displayItems.map(el => (
            <li key={el.id} className="list-item">
              <Item item={el}/>
            </li>    
             ))};
-      </ul>
-       
+          </ul>
+      </main>
     )
 }
 

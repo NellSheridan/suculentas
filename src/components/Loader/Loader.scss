@@ -1,3 +1,9 @@
+.Loader__container {
+    height: 100vh;
+    display: flex;
+    background-color: #FAFAFA;
+}
+
 .Loader {
     display: flex;
     justify-content: center;
@@ -10,5 +16,21 @@
         background-color: #418880;
         border-radius: 50%;
         margin: 3rem;
+        animation: loader-animation .6s infinite alternate;
     }
+}
+
+@keyframes loader-animation {
+    to {
+        opacity: 1;
+        transform: translate3d(0, -1rem, 0);
+    }
+}
+
+.Loader div:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.Loader div:nth-child(3) {
+    animation-delay: .4s;
 }
