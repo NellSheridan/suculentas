@@ -1,9 +1,32 @@
 .Cart__right {
     height: 100vh;
-    border: 1px solid red;
     background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    div {
+        padding: 10px 0;
+        border-bottom: 1px solid #e0e0e0;;
+    }
 }
 
 .mt-100 {
     margin-top: 100px;
+}
+
+.Cart__title {
+    font-weight: bolder;
+}
+
+.Cart__button {
+    margin-top: 30px;
+    cursor: pointer;
+    margin-left: 30px;
+    padding: 10px;
+    background-color:  #2D6D59;
+    color: white;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: 16px;
 }

@@ -14,16 +14,16 @@ const Cart = () => {
             <div className="row">
                 <div className="col-12 col-lg-8">
                     <section className="Cart__left">
-                        <h2 className="Cart__title">Carrito de Compras</h2>
+                        <h3 className="Cart__title">Carrito de Compras</h3>
                         { listProducts.map(item => <CartProduct item={item} key={item.id} /> )}
                     </section>
                 </div>
                 <div className="col-12 col-lg-4">
                     <section className="Cart__right">
-                        <h2 className="Cart__title">Resumen de la compra</h2>
+                        <h3 className="Cart__title">Resumen de la compra</h3>
                         <div>Subtotal: S/ 400</div>
                         <div>Total: S/ 400</div>
-                        <button>Continuar con el pago</button>
+                        <button className="Cart__button">Continuar con el pago</button>
                     </section>
                 </div>
             </div>

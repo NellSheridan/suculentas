@@ -4,7 +4,6 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const CartProduct = ({ item }) => {
-    console.log(item);
     return (
         <div className="card">
             <div className="card-product__container">
@@ -12,12 +11,12 @@ const CartProduct = ({ item }) => {
                     <img src={item?.image} alt={item?.name}/>
                 </div>
                 <div className="card-product_description">
-                    <p className="name">{ item.name }</p>
-                    <p>Codigo: { item.code }</p>
+                    <div className="name">{ item.name }</div>
+                    <div>Codigo: { item.code }</div>
                 </div>
                 <div>
-                    <p>Internet: S/ { item.price }</p>
-                    <p>Descuento: S/ { item.price }</p>
+                    <div>Internet: S/ { item.price }</div>
+                    <div>Descuento: S/ { item.price }</div>
                 </div>
                 <div>
                     Cantidad: { item.quantity}
