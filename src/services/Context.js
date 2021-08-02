@@ -9,7 +9,16 @@ export const DataProvider = ({ children }) => {
         setCart([...cart, item]);
     }
 
-    return <Context.Provider value= {{ addCart }}>
+    const allProductsToBuy = () => cart
+
+    const deleteItem = (itemToRemove) => {
+        let newArray = cart.filter( item => item.id !== itemToRemove.id);
+        setCart(newArray)
+    }
+
+    const clearCart = () => setCart([]);
+
+    return <Context.Provider value= {{ addCart, allProductsToBuy, deleteItem, clearCart }}>
         { children }
     </Context.Provider>
 }

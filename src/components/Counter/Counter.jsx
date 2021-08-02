@@ -3,7 +3,6 @@ import './Counter.scss';
 
 const Counter = (props) => {
     // Pendiente Refactorizar usando destructuracion
-    console.log(props);
     // const [count, setCount] = useState(1);
 
     const buttonIncreaseQuantity = () => {

@@ -1,15 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Counter from '../Counter/Counter';
 import { Link } from 'react-router-dom';
 import './ItemDetail.scss'
+import { Context } from '../../services/Context';
 
 const ItemDetail = ({ itemToDisplay }) => {
+
+    const { addCart, deleteItem } = useContext(Context);
 
     const [ count, setCount ] = useState(1);
 
     const [ finished, setFinished ] = useState(false);
 
     const handleState = () => setFinished(!finished);
+
+    const handleSend = () => {
+        addCart({ ...itemToDisplay, quantity: count })
+    }
+
+    const removeItem = () => {
+        deleteItem(itemToDisplay)
+    }
 
     return (
         <div className="Detail__container">
@@ -29,6 +40,7 @@ const ItemDetail = ({ itemToDisplay }) => {
                         />
                         <button onClick={() => {
                             handleState();
+                            handleSend();
                         }}> Comprar </button>
                     </div>
                 ) : (
