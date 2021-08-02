@@ -1,25 +1,21 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './Counter.scss';
 
-const Counter = (props) => {
-    // Pendiente Refactorizar usando destructuracion
-    // const [count, setCount] = useState(1);
+const Counter = ({ min, count, setCount, max }) => {
 
     const buttonIncreaseQuantity = () => {
-        props.count < props.max && props.setCount(props.count + 1);
-        // setCount(count + 1);
+        count < max && setCount(count + 1);
     }
 
     const buttonDecreaseQuantity = () => {
-        props.count > props.min && props.setCount(props.count - 1);
-        // setCount(count - 1);
+        count > min && setCount(count - 1);
     }
 
     return (
         <div className="item-count-wrapper">
-            <button disabled={props.count == props.min} onClick={buttonDecreaseQuantity}>-</button>
-            <span>{ props.count }</span>
-            <button disabled={props.count == props.max} onClick={buttonIncreaseQuantity}>+</button>
+            <button disabled={count == min} onClick={buttonDecreaseQuantity}>-</button>
+            <span>{ count }</span>
+            <button disabled={count == max} onClick={buttonIncreaseQuantity}>+</button>
         </div>
     )
 }

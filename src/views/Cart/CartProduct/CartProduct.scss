@@ -1,3 +1,21 @@
-.Cart__title {
-    margin-top: 100px;
+.card-product__image img {
+    width: 100px;
+}
+
+.card-product__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.icon-trash__container {
+    padding: 20px;
+}
+
+.card-product_description{
+    .name {
+        font-weight: bolder;
+        text-transform: uppercase;
+    }
 }

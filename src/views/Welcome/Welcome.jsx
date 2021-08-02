@@ -1,7 +1,5 @@
 import React from 'react';
 import './Welcome.scss';
-import { faArrowCircleDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Welcome = () => {
     return (
