@@ -38,14 +38,14 @@ const ItemDetail = ({ itemToDisplay }) => {
                             setCount={setCount}
                             max={itemToDisplay?.stock}
                         />
-                        <button onClick={() => {
+                        <button className="Detail__button" onClick={() => {
                             handleState();
                             handleSend();
                         }}> Comprar </button>
                     </div>
                 ) : (
                     <Link to="/bolsa" onClick={handleState}>
-                        <button onClick={handleState}>Terminar mi compra</button>
+                        <button className="Detail__button" onClick={handleState}>Terminar mi compra</button>
                     </Link>
                 )
             }

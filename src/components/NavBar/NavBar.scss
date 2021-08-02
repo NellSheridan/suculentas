@@ -21,8 +21,7 @@
         max-width: 1270px;
         margin-right: auto;
         margin-left: auto;
-        padding-right: 30px;
-        padding-left: 30px;
+        padding: 8px 30px;
         justify-content: space-between;
         align-items: center;
     }
@@ -40,21 +39,27 @@
     }
 }
 
-ul {
+.Nav__item-wrapper {
+    text-transform: uppercase;
     display: flex;
     align-items: center;
+    margin-bottom: 0;
 }
 
-li {
+.Nav__item {
     list-style: none;
     padding: 0 20px;
     cursor: pointer;
     list-style: none;
+    a {
+        text-decoration: none;
+        color: black;
+        &:hover {
+            color: #418880;
+        }
+    }
 }
 
-a {
-    text-decoration: none;
-    color: black;
-}
+
 
 

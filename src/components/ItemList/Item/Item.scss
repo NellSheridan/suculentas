@@ -1,10 +1,3 @@
-.Item__container {
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    box-shadow: 0 0 3.56px rgb(0 0 0 / 22%);
-}
 
 .card:hover {
     box-shadow: 0 5px 15px rgb(0 0 0 / 35%);
@@ -20,10 +13,20 @@
     text-align: left;
 }
 
+.card-title {
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
 .card-footer {
     border-top: 1px solid rgba(0,0,0,.12);
 }
 
+.w-h {
+    max-width: 304px;
+    max-height: 380px;
+}
 .button-add {
     margin-top: 12px;
     margin-bottom: 10px;
