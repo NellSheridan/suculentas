@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import './ItemCount.css';
+import './Counter.scss';
 
-const ItemCount = (props) => {
+const Counter = (props) => {
     // Pendiente Refactorizar usando destructuracion
     console.log(props);
     // const [count, setCount] = useState(1);
@@ -25,4 +25,4 @@ const ItemCount = (props) => {
     )
 }
 
-export default ItemCount;
+export default Counter;

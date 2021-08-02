@@ -1,49 +1,45 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './components/ItemListContainer/ItemDetailContainer/ItemDetailContainer';
-import WelcomeContainer from './components/WelcomeContainer/WelcomeContainer';
-import CheckoutCart from './views/CheckoutCart/CheckoutCart';
-import Promotions from './views/Promotions/Promotions'
+import ItemListContainer from './components/ItemList/ItemListContainer';
+// import ItemDetailContainer from './components/ItemListContainer/ItemDetailContainer/ItemDetailContainer';
+import Welcome from './views/Welcome/Welcome';
+// import CheckoutCart from './views/CheckoutCart/CheckoutCart';
+// import Promotions from './views/Promotions/Promotions'
 import About from './views/About/About'
 import Blog from './views/Blog/Blog'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { DataProvider } from './services/Context'
 
 function App() {
-
-  const greetings = {
-    title: '!Directo del Vivero te ofrecemos¡',
-  };
   return (
     <div className="App">
-    <DataProvider>
       <BrowserRouter>
-        <NavBar/>
+        <header>
+          <NavBar/>
+        </header>
         <Switch>
           <Route exact path="/">
-            <WelcomeContainer />
-            <ItemListContainer greeting={greetings}/>
+            <Welcome />
           </Route>
-          <Route path="/productos/:id">
-              <ItemDetailContainer />
+          <Route path="/productos">
+            <ItemListContainer />
           </Route>
-          <Route path="/que-hacemos">
+          {/* <Route path="/products">
+            <Products />
+          </Route> */}
+          <Route path="/conócenos">
             <About />
-          </Route>
-          <Route path="/promociones">
-            <Promotions />
           </Route>
            <Route path="/blog">
              <Blog />
           </Route>
-          <Route path="/bolsa">
-            <CheckoutCart />
-          </Route>
+          {/* <Route path="/contacto">
+            <Contact />
+          </Route> */}
+          {/* <Route path="/bolsa">
+            <Cart />
+          </Route> */}
         </Switch>
       </BrowserRouter>
-    </DataProvider>
-
     </div>
   );
 }

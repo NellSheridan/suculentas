@@ -1,9 +1,9 @@
 import React from 'react';
-import './WelcomeContainer.css';
+import './Welcome.scss';
 import { faArrowCircleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const WelcomeContainer = () => {
+const Welcome = () => {
     return (
         <div className="welcome-wrapper">
                 <h1 className="title-welcome">
@@ -20,4 +20,4 @@ const WelcomeContainer = () => {
     )
 }
 
-export default WelcomeContainer;
+export default Welcome;
