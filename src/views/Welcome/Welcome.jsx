@@ -15,7 +15,6 @@ const Welcome = () => {
                     Suculentas - Cactus y más
                 </h2>
                 <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum tenetur enim aut laborum voluptas accusamus rerum error, dolorum, iste hic ducimus labore, nam provident eaque autem accusantium aliquid obcaecati impedit?</p>
-                <button className="btn-shop">Conoce nuestros Productos <FontAwesomeIcon icon={faArrowCircleDown} /></button>
         </div>
     )
 }

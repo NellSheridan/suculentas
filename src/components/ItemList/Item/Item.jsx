@@ -1,21 +1,17 @@
 import React from 'react';
-import './Item.css';
+import './Item.scss';
 import { Link } from 'react-router-dom'
-import Counter from '../../Counter/Counter';
 
 const Item = ({ item }) => {
     return (
-        <div className="card">
+        <div className="card" style={ { width:'18rem' }}>
+            <Link to={`/producto/${item.id}`}>
+                <img className="card-img-top" src={item.image} alt={item.name}/>
+            </Link>
             <div className="card-body">
-                <Link to={`/productos/${item.id}`}>
-                    <img className="card-image" src={item.image} alt={item.name}/>
-                </Link>
-                <h3>{item.name}</h3>
-                <p className="card-price"><em>S/</em> {item.price}</p>
-            </div>
-            <div className="card-footer">
-                <Counter min={1} max={item.stock}/>
-                <button className="button-add">Agregar</button>
+                <h5 className="card-title">{item.name}</h5>
+                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p><em>S/ </em>{item.price}</p>
             </div>
         </div>
     )

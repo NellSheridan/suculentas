@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './ItemListContainer.css';
 import ItemList from './ItemList';
 import Loader from '../Loader/Loader';
 import { database } from '../../firebase/firebase';

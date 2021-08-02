@@ -1,7 +1,7 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemList/ItemListContainer';
-// import ItemDetailContainer from './components/ItemListContainer/ItemDetailContainer/ItemDetailContainer';
+import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
 import Welcome from './views/Welcome/Welcome';
 // import CheckoutCart from './views/CheckoutCart/CheckoutCart';
 // import Promotions from './views/Promotions/Promotions'
@@ -24,9 +24,9 @@ function App() {
           <Route path="/productos">
             <ItemListContainer />
           </Route>
-          {/* <Route path="/products">
-            <Products />
-          </Route> */}
+          <Route path="/producto/:id">
+            <ItemDetailContainer />
+          </Route>
           <Route path="/conócenos">
             <About />
           </Route>
